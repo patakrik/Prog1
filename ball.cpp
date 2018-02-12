@@ -17,17 +17,17 @@ int main()
 		system("clear");
 
 		x += pow( -1, (x1-1)/(szelesseg-3));
-		y += pow( -1, (y1-1)/magassag-3));
+		y += pow( -1, (y1-1)/(magassag-3));
 		x1++;
 		y1++;
 
-		for(int i = 0 , i < szelesseg , i++)
+		for(int i = 0 ; i < szelesseg ; i++)
 		{
 			cout <<"#";
 		}
 		cout <<"\n";
 
-		for(int i = i < y - 1 , i++)
+		for(int i = 0; i < y - 1 ; i++)
 		{
 			cout <<"#";
 			for(int j = 0; j < szelesseg-2; j++)
@@ -43,11 +43,10 @@ int main()
 			cout << " ";
 		}
 		cout <<"@";
-		for(int i = y ; i < szelesseg-1; i++)
 		{
 			cout << " ";
 		}
-		cout << "#" << "\n";
+		cout << " " << "\n";
 
 		for(int i = y; i < magassag-2; i++)
 		{
@@ -68,7 +67,7 @@ int main()
 		{
 			cout << "#";
 		}
-		cout << "\n\n" <<"Coordinates:"<< "\nx" << x << "y:" << y << end1;
+		cout << "\n\n" <<"Coordinates:"<< "\nx" << x << "y:" << y << endl;
 	} 
 	return 0;
 }
