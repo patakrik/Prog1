@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-	int a=43;
-	int b=543;
+	int a=74;
+	int b=98;
 
 	cout<<a<<" "<<b<<endl;
 
