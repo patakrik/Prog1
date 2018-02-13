@@ -4,17 +4,19 @@ using namespace std;
 
 int main()
 {
+	int a=43;
+	int b=543;
 
-int a = 3, b = 4;
+	cout<<a<<" "<<b<<endl;
 
-cout<<"a: "<<a<<" b: "<<b<<endl;
+	b=a+b;
+	a=b-a;
+	b=b-a;
 
-a ^= b;
-b ^= a;
-a ^= b;
+	cout<<a<<" "<<b<<endl;
+	
 
-cout<<"a: "<<a<<" b: "<<b<<endl;
 
+
+	return 0;
 }
-
-
