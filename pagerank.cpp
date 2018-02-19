@@ -1,3 +1,5 @@
+// tutor: Fekete Attila 
+
 #include <iostream>
 #include <math.h>
 
