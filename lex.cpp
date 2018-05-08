@@ -1,43 +1,46 @@
-//tutor : Csicsek Máté
-
 #include <iostream>
+#include <iomanip>
 #include <fstream>
-#include <ctype.h>
-
 using namespace std;
 
-int main(){
+int main() {
+    int betu = 0;
+    int sor = 0;
+    int szo = 0;
+    int szokoz = 0;
+    int szam = 0;
+    int irasjel = 0;
+    char c;
 
-	ifstream fin;
-	fin.open("üzenet");
+    ifstream is("ki.txt");
 	
-	char ch;
-
-	int betu = 0;
-	int sor = 0;
-	int szam = 0;
-	int space = 0;
-	int spec = 0;
-
-	while(fin.get(ch)){
- 		if(ch == ' ' || ch == '\t'){
-			space++;
-		}	
-		if(isalpha(ch)){
-			betu++;
+    while (is.get(c)) {
+        if (c == ' ' || c == '\t') {
+		szokoz++;
 		}
-		if(isdigit(ch)){
+		if (isalpha(c)){
+                        betu++;
+                }
+		if (isdigit(c)) {
 			szam++;
 		}
-		if(ch == '\n'){
+		if (c == '\n') {
 			sor++;
 		}
-		if(ispunct(ch)){
-			spec++;
-		}	
+		if (ispunct(c)) {
+			irasjel++;
+		}
+		if (c == ' ' || c == '\t' || c == '\n') {
+			szo++;
+		}
+    }
 
-	}
-	fin.close();
-	cout << "Szam: " << szam << "\nBetu: " << betu << "\nSpace: " << space << "\nSor: " << sor << "\nSpec: " << spec << endl;
+    if (c != '\n') {
+        sor++;
+    }
 
+	is.close();
+	
+    cout << "Sor, Szó, Betű, Szóköz, Szám, Egyéb írásjel\n";
+    cout << setw(2) << sor << setw(6) << szo << setw(6) << betu << setw(6) << szokoz << setw(7) << szam << setw(9) << irasjel << endl;
 }
