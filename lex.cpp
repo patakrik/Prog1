@@ -1,3 +1,5 @@
+//tutor : Csicsek Máté
+
 #include <iostream>
 #include <fstream>
 #include <ctype.h>
